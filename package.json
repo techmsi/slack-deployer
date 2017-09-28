@@ -6,14 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index",
-    "expose-grok": "ngrok http 5000"
+    "expose-grok": "ngrok http 5000",
+    "changelog": "git-changelog -t false -a 'My nice application'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/techmsi/slack-deployer.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "techmsi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/techmsi/slack-deployer/issues"
@@ -27,6 +28,9 @@
     "request": "^2.83.0"
   },
   "devDependencies": {
+    "generate-changelog": "^1.5.0",
+    "git-changelog": "^1.1.2",
+    "github-changes": "^1.1.0",
     "ngrok": "^2.2.22",
     "nodemon": "^1.12.1"
   }

@@ -1,0 +1,17 @@
+{
+    "app_name": "Slack Deployer",
+    "logo": "icon_deploy.png",
+    "intro": "Slack command for deployment.",
+    "branch" : "master",
+    "repo_url": "https://github.com/techmsi/slack-deployer.git",
+    "version_name" : "v1.0.0",
+    "file": "CHANGELOG.md",
+    "template": "changelogTemplate.md",
+    "debug":true,
+    "sections" : [
+          {
+            "title": "Test commits",
+            "grep": "^a"
+          }
+        ]
+}
