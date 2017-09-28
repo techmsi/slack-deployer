@@ -12,6 +12,10 @@
           {
             "title": "Test commits",
             "grep": "^a"
+          },
+          {
+            "title": "New Awesome Features!",
+            "grep": "^feat"
           }
         ]
 }
