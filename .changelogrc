@@ -11,7 +11,11 @@
     "sections" : [
           {
             "title": "Breaking commits",
-            "grep": "BREAKING"
+            "grep": "^BREAKING"
+          },
+          {
+            "title": "Modifications",
+            "grep": "^Modify"
           },
           {
             "title": "New Awesome Features!",
