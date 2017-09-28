@@ -11,40 +11,43 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // use port is set in the environment variable, or 9001 if it isn’t set.
-app.set('port', (process.env.PORT || 9001));
+app.set('port', (process.env.PORT || 5000));
 
 // for testing that the app is running
 app.get('/', function (req, res) {
   res.send('Running!!');
 });
 
+
 // app.post is triggered when a POST request is sent to the URL ‘/post’
 app.post('/post', function (req, res) {
   // take a message from Slack slash command
-  console.log("req.body.text ", req.body.text);
+  console.log('req.body.text ', req.body.text);
   var cityName = req.body.text || 'New York';
   var ENDPOINT = `http://api.openweathermap.org/data/2.5/weather?appid=${apikey}&q=${cityName}`;
 
   request(ENDPOINT, function (error, response, body) {
-    console.log("Going to ENDPOINT ", ENDPOINT);
-    
+    console.log('\n' + ENDPOINT + '\n');
+
     if (!error && response.statusCode === 200) {
-      const data = JSON.parse(body);
-      const { name: location, weather: { main: weatherCondition, icon }, main: { temp: temperature } } = data;
+      const data = JSON.parse(response.body);
+      const { name: location, weather, main: { temp: temperature } } = data;
+      const { main: weatherCondition, icon } = weather[0];
+
+      const slackResponse = `Location: ${location}\nTemperature: ${temperature}\nCondition: ${weatherCondition}`;
+
+      console.log(slackResponse);
 
       const body = {
         response_type: 'in_channel',
         attachments: [
           {
-            'text': `
-              Location: ${location}
-              Temperature: ${temperature}
-              Condition: ${weatherCondition}
-              `,
-            'image_url': icon
+            'text': slackResponse,
+            'image_url': `http://openweathermap.org/img/w/${icon}.png`
           }
         ]
       };
+
       res.send(body);
     }
   });
