@@ -10,8 +10,8 @@
     "debug":true,
     "sections" : [
           {
-            "title": "Test commits",
-            "grep": "^a"
+            "title": "Breaking commits",
+            "grep": "BREAKING"
           },
           {
             "title": "New Awesome Features!",
