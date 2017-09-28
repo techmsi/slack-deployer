@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index"
+    "dev": "nodemon index",
+    "expose-grok": "ngrok http 5000"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "request": "^2.83.0"
   },
   "devDependencies": {
+    "ngrok": "^2.2.22",
     "nodemon": "^1.12.1"
   }
 }
