@@ -15,6 +15,18 @@
           "value": "5128581"
         },
         {
+          "name": "Boston",
+          "text": "Boston, US",
+          "type": "button",
+          "value": "4930956"
+        },
+        {
+          "name": "Chicago",
+          "text": "Chicago, US",
+          "type": "button",
+          "value": "4887398"
+        },
+        {
           "name": "Athens",
           "text": "Athens, GR",
           "type": "button",
