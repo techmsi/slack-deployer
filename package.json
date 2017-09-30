@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index",
-    "expose-grok": "ngrok http 5000",
+    "expose-grok": "ngrok http 5000"
   },
   "repository": {
     "type": "git",
