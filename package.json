@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index",
     "expose-grok": "ngrok http 5000",
-    "changelog": "git-changelog -t false -a 'My nice application'"
   },
   "repository": {
     "type": "git",
@@ -23,14 +21,10 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "dotenv": "^4.0.0",
-    "ejs": "^2.5.7",
     "express": "^4.15.5",
     "request": "^2.83.0"
   },
   "devDependencies": {
-    "generate-changelog": "^1.5.0",
-    "git-changelog": "^1.1.2",
-    "github-changes": "^1.1.0",
     "ngrok": "^2.2.22",
     "nodemon": "^1.12.1"
   }
