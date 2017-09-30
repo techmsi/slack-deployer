@@ -1,0 +1,26 @@
+{
+  "text": "The weather in the main cities.",
+  "attachments": [
+    {
+      "text": "Which city do you want to view the weather for?",
+      "fallback": "Shame... buttons aren't supported in this land",
+      "callback_id": "button_tutorial",
+      "color": "#3AA3E3",
+      "attachment_type": "default",
+      "actions": [
+        {
+          "name": "NYC",
+          "text": "New York City, US",
+          "type": "button",
+          "value": "5128581"
+        },
+        {
+          "name": "Athens",
+          "text": "Athens, GR",
+          "type": "button",
+          "value": "264371"
+        }
+      ]
+    }
+  ]
+}
